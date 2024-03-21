@@ -1,23 +1,23 @@
 # Cooper Casino Monorepo    
-This is a "source of truth" on what could be considered a stable release for our    
-project. Pull the main branch recursively, grabbing the frontend, backend, and  
-database repo, and launch using docker compose. More comprehensive instructions,    
+This is a "source of truth" on what could be considered a stable release for our     
+project. Pull the main branch recursively, grabbing the frontend, backend, and      
+database repo, and launch using docker compose. More comprehensive instructions,        
 soon.   
-`main` reflects what is `main` on our module repos. 
+`main` reflects what is `main` on our module repos.     
 # For deployers
 Pull this 
 
 # For developers    
-Lets say you have a branch you're working on, on one of the other module repos. 
+Lets say you have a branch you're working on, on one of the other module repos.     
 You want to deploy against a stable frontend, and db, while you want to test    
-changes on backend. How do we do this?  
+changes on backend. How do we do this?      
 First: clone this repo recursively! Its easiest if this is a clean clone.   
 ```
-git clone --recurse-submodules git@github.com:ECE-366-Final-Project/monorepo.git 
+git clone --recurse-submodules git@github.com:ECE-366-Final-Project/monorepo.git    
 ``` 
 Please make a new branch, so you can save your work, if you need to.    
 ```
-git checkout -b <username>/<branch-name>
+git checkout -b <username>/<branch-name>    
 ``` 
 Second: All our modules are pointing to the hash associated with each modules   
 `main` branch. How do we get backend to point somewhere else? We tell git to    
