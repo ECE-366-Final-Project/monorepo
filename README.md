@@ -5,7 +5,18 @@ database repo, and launch using docker compose. More comprehensive instructions,
 soon.   
 `main` reflects what is `main` on our module repos.     
 # For deployers
-Pull this 
+Pull recursively (if you havent done so already)    
+```
+git clone --recurse-submodules git@github.com:ECE-366-Final-Project/monorepo.git
+```
+Make sure that docker and docker-compose are installed  
+[See the Docker docs for instructions!](https://docs.docker.com/compose/install/)
+
+Build and initialize the project with   
+```
+$ docker compose up --build -d
+```
+Ensure that ports `8080` and `5432` are not already bound!      
 
 # For developers    
 Lets say you have a branch you're working on, on one of the other module repos.     
