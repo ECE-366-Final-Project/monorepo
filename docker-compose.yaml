@@ -29,3 +29,16 @@ services:
       POSTGRES_DB: "postgres"
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "password"
+  casino-frontend:
+    build:
+      context: .
+      dockerfile: frontend/frontend.Dockerfile
+    restart: unless-stopped
+    expose:
+      - "12345"
+      - "80"
+    ports:
+      - "0.0.0.0:80:80"
+      - "0.0.0.0:12345:12345"
+    depends_on:
+      - "casino-backend"
