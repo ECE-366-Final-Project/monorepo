@@ -4,6 +4,21 @@ project. Pull the main branch recursively, grabbing the frontend, backend, and
 database repo, and launch using docker compose. More comprehensive instructions,        
 soon.   
 `main` reflects what is `main` on our module repos.     
+Our Module structure is as follows:     
+```
+monorepo
+    |
+    |---frontend
+    |
+    \---backend
+        |---database
+        |---commandline
+```
+- frontend: Contains Flutter-based frontend
+- backend: Contains Spring backend
+- database: Contains config files related to db deployment
+- commandline: Basic Command line API Interface for headless operation
+
 # For deployers
 Pull recursively (if you havent done so already)    
 ```
