@@ -27,13 +27,6 @@ git clone --recurse-submodules git@github.com:ECE-366-Final-Project/monorepo.git
 Make sure that docker and docker-compose are installed  
 [See the Docker docs for instructions!](https://docs.docker.com/compose/install/)
 
-Build and initialize the project with   
-```
-$ docker compose up --build -d
-```
-Ensure that ports `8080` and `5432` are not already bound!      
-
-# For developers    
 Lets say you have a branch you're working on, on one of the other module repos.     
 You want to deploy against a stable frontend, and db, while you want to test    
 changes on backend. How do we do this?      
@@ -41,7 +34,7 @@ First: clone this repo recursively! Its easiest if this is a clean clone.
 ```
 git clone --recurse-submodules git@github.com:ECE-366-Final-Project/monorepo.git    
 ``` 
-Please make a new branch, so you can save your work, if you need to.    
+Please make a new branch (within monorepo!), so you can save your work, if you need to.    
 ```
 git checkout -b <username>/<branch-name>    
 ``` 
@@ -51,10 +44,16 @@ pull our submodule from a different commit hash.
 The easiest way is to `cd` in, and tell the repo to look somewhere else.    
 ```
 git submodule update --init --recursive --remote #yells at git to get remote branches 
-cd Back-End
-git checkout <name of remote branch you want>
+cd <backend || frontend>
+git switch <name of remote branch you want>
 ``` 
-Now see the deployment section for getting the program running! 
+
+Now, the fun part! Build and initialize the project with   
+```
+$ docker compose up --build -d
+```
+Ensure that ports `8080` and `5432` are not already bound!      
+
 
 # Headless mode 
 Headless mode deploys the casino with no Flutter dependency, ie just    
