@@ -52,8 +52,11 @@ Now, the fun part! Build and initialize the project with
 ```
 $ docker compose up --build -d
 ```
-Ensure that ports `80` and `5432` are not already bound!      
+Ensure that ports `80`, `8080` and `5432` are not already bound!      
 
+If you have issues pulling the modules, replace `git@github.com:` with    
+`https://github.com/` in all .gitmodules! Or make an ssh key and attach    
+it to GitHub.
 
 # Headless mode 
 Headless mode deploys the casino with no Flutter dependency, ie just    
