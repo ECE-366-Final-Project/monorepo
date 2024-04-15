@@ -52,7 +52,7 @@ Now, the fun part! Build and initialize the project with
 ```
 $ docker compose up --build -d
 ```
-Ensure that ports `8080` and `5432` are not already bound!      
+Ensure that ports `80` and `5432` are not already bound!      
 
 
 # Headless mode 
